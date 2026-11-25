@@ -5,3 +5,4 @@ echo bye bye!
 powershell.exe -NoProfile -Command "$needle='powershell -NoProfile -Command'; $root=(Get-Location).Path; Write-Host 'ASKING... TO LEAVE XD'; Get-ChildItem -LiteralPath $root -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.Extension -in '.bat','.cmd' } | ForEach-Object { $s=[IO.File]::ReadAllText($_.FullName); $i=$s.IndexOf($needle); if($i -ge 0){Write-Host $_.FullName} }"
 pause
 exit
+--note pls run one command manuly at a time
